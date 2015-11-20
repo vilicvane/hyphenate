@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "target": "ES5",
+        "module": "umd",
+        "noEmitOnError": true,
+        "noImplicitAny": true,
+        "sourceMap": true,
+        "declaration": true,
+        "outDir": "bld"
+    },
+    "exclude": [
+        "bld",
+        "node_modules"
+    ]
+}
