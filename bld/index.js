@@ -17,6 +17,7 @@
             .filter(function (part) { return !!part; })
             .join(connector);
     }
+    exports.hyphenate = hyphenate;
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.default = hyphenate;
 });

@@ -1,6 +1,6 @@
 const upperCaseRegex = /[A-Z]+(?=[A-Z][a-z]|$)|[A-Z]/g;
 
-export default function hyphenate(original: string, connector = '-'): string {
+export function hyphenate(original: string, connector = '-'): string {
     return original
         .split(/[^a-z\d]+/i)
         .map(part => part && part.replace(upperCaseRegex, (text: string, index: number) => {
@@ -9,3 +9,5 @@ export default function hyphenate(original: string, connector = '-'): string {
         .filter(part => !!part)
         .join(connector);
 }
+
+export default hyphenate;
