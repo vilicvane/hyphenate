@@ -1,7 +1,7 @@
 {
   "name": "hyphenate",
-  "version": "0.1.0",
-  "description": "",
+  "version": "0.1.1",
+  "description": "A simple helper function to hyphenate phrases.",
   "main": "bld/index.js",
   "typings": "bld/index.d.ts",
   "scripts": {
