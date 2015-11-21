@@ -46,6 +46,19 @@
             ]
         },
         {
+            name: 'phrase with number',
+            cases: [
+                {
+                    original: 'camelCaseString8',
+                    hyphenated: 'camel-case-string8'
+                },
+                {
+                    original: '7Days',
+                    hyphenated: '7-days'
+                }
+            ]
+        },
+        {
             name: 'splitted',
             cases: [
                 {
