@@ -17,7 +17,7 @@ let caseGroups: CaseGroup[] = [
         cases: [
             {
                 original: 'camelCaseString',
-                hyphenated: 'camel-case-string'
+                hyphenated: 'camel-Case-String'
             },
             {
                 original: 'standalone',
@@ -25,27 +25,27 @@ let caseGroups: CaseGroup[] = [
             },
             {
                 original: 'CapitalizedCase',
-                hyphenated: 'capitalized-case'
+                hyphenated: 'Capitalized-Case'
             },
             {
                 original: 'CapitalizedCase',
-                hyphenated: 'capitalized-case'
+                hyphenated: 'Capitalized-Case'
             },
             {
                 original: 'CapitalizedXCase',
-                hyphenated: 'capitalized-x-case'
+                hyphenated: 'Capitalized-X-Case'
             },
             {
                 original: 'JSONFile',
-                hyphenated: 'json-file'
+                hyphenated: 'JSON-File'
             },
             {
                 original: 'HelloWORLD',
-                hyphenated: 'hello-world'
+                hyphenated: 'Hello-WORLD'
             },
             {
                 original: 'HowAREYou',
-                hyphenated: 'how-are-you'
+                hyphenated: 'How-ARE-You'
             }
         ] 
     },
@@ -54,11 +54,23 @@ let caseGroups: CaseGroup[] = [
         cases: [
             {
                 original: 'camelCaseString8',
-                hyphenated: 'camel-case-string8'
+                hyphenated: 'camel-Case-String-8'
             },
             {
                 original: '7Days',
-                hyphenated: '7-days'
+                hyphenated: '7-Days'
+            },
+            {
+                original: 'hello2015',
+                hyphenated: 'hello-2015'
+            },
+            {
+                original: 'abc123def',
+                hyphenated: 'abc-123-def'
+            },
+            {
+                original: 'abc.123.def',
+                hyphenated: 'abc-123-def'
             }
         ] 
     },
@@ -79,7 +91,7 @@ let caseGroups: CaseGroup[] = [
             },
             {
                 original: '[]And yes, man~',
-                hyphenated: 'and-yes-man'
+                hyphenated: 'And-yes-man'
             }
         ] 
     },
@@ -88,7 +100,7 @@ let caseGroups: CaseGroup[] = [
         cases: [
             {
                 original: 'someText',
-                hyphenated: 'some_text'
+                hyphenated: 'some_Text'
             },
             {
                 original: '_hello__world',
@@ -107,7 +119,14 @@ describe('hyphenate', () => {
     for (let caseGroup of caseGroups) {
         it('should hyphenate ' + caseGroup.name, () => {
             for (let oneCase of caseGroup.cases) {
-                hyphenate(oneCase.original, caseGroup.connector).should.equal(oneCase.hyphenated);
+                hyphenate(oneCase.original, {
+                    connector: caseGroup.connector
+                }).should.equal(oneCase.hyphenated);
+                
+                hyphenate(oneCase.original, {
+                    connector: caseGroup.connector,
+                    lowerCase: true
+                }).should.equal(oneCase.hyphenated.toLowerCase());
             }
         });
     }
