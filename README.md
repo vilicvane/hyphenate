@@ -14,7 +14,8 @@ npm install hyphenate --save
 import hyphenate from 'hypenate';
 
 hyphenate('hello, world!'); // "hello-world"
-hyphenate('JSONDataItems'); // "json-data-items"
+hyphenate('JSONDataItems'); // "JSON-Data-Items"
+hyphenate('JSONDataItems', { lowerCase: true }); // "json-data-items"
 ```
 
 Or if you are still using plain ES5:
