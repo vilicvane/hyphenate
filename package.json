@@ -2,17 +2,28 @@
   "name": "hyphenate",
   "version": "0.2.1",
   "description": "A simple helper function that hyphenates phrases.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vilic/hyphenate.git"
+  },
+  "author": "vilicvane",
+  "license": "MIT",
   "main": "bld/index.js",
-  "typings": "bld/index.d.ts",
+  "types": "bld/index.d.ts",
   "scripts": {
     "build": "tsc",
     "test": "mocha"
   },
-  "author": "vilicvane",
-  "license": "MIT",
+  "files": [
+    "bld",
+    "!bld/test"
+  ],
   "devDependencies": {
-    "chai": "^3.4.1",
-    "mocha": "^2.3.4",
-    "typescript": "next"
+    "@magicspace/configs": "^0.1.29",
+    "@types/chai": "^4.1.4",
+    "@types/mocha": "^5.2.5",
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
+    "typescript": "^3.0.3"
   }
 }

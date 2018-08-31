@@ -5,21 +5,15 @@ A simple helper function that splits and then joins words back together.
 ## Install
 
 ```sh
-npm install hyphenate --save
+yarn add hyphenate
 ```
 
 ## Usage
 
 ```ts
-import hyphenate from 'hypenate';
+import hyphenate from 'hyphenate';
 
 hyphenate('hello, world!'); // "hello-world"
 hyphenate('JSONDataItems'); // "JSON-Data-Items"
-hyphenate('JSONDataItems', { lowerCase: true }); // "json-data-items"
-```
-
-Or if you are still using plain ES5:
-
-```ts
-var hyphenate = require('hyphenate').default;
+hyphenate('JSONDataItems', {lowerCase: true}); // "json-data-items"
 ```
