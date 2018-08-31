@@ -16,7 +16,8 @@
   },
   "files": [
     "bld",
-    "!bld/test"
+    "!bld/test",
+    "!*.js.map"
   ],
   "devDependencies": {
     "@magicspace/configs": "^0.1.29",
