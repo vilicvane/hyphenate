@@ -1,8 +1,11 @@
 {
+  "extends": "./node_modules/@magicspace/configs/tsconfig.json",
   "compilerOptions": {
+    "types": ["mocha", "chai"],
     "declaration": true,
+
     "rootDir": "src",
     "outDir": "bld"
   },
-  "include": ["src", "types"]
+  "include": ["src"]
 }
