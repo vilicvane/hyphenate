@@ -15,9 +15,10 @@
     "test": "mocha"
   },
   "files": [
+    "src/**/*.ts",
+    "!src/test",
     "bld",
-    "!bld/test",
-    "!*.js.map"
+    "!bld/test"
   ],
   "devDependencies": {
     "@magicspace/configs": "^0.1.29",
