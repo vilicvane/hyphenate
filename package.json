@@ -1,6 +1,6 @@
 {
   "name": "hyphenate",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "A simple helper function that hyphenates phrases.",
   "repository": {
     "type": "git",
